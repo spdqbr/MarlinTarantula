@@ -177,27 +177,6 @@
 //#define MAX_OVERSHOOT_PID_AUTOTUNE 20
 
 /**
- * Enable a custom menu that contains three preheat presets for PLA, ABS and PETG
- */
-#define CUSTOM_USER_MENUS
-
-/**
- * Set your custom preheat presets here
- *
- * NOTE: Only PLA and ABS will appear under the Prepare menu. You must enable
- *       CUSTOM_USER_MENUS for PETG to appear, along with PLA and ABS, under Custom Commands.
- *       PLA and ABS will appear under both Custom Command and Prepare.
- */
-#define Hot_PLA     215
-#define Bed_PLA      75
-
-#define Hot_ABS 		240
-#define Bed_ABS 		100
-
-#define Hot_PETG 		230
-#define Bed_PETG     80
-
-/**
  * Fan Soft PWM. Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
  * which is not as annoying as with the hardware PWM. Redo PID Autotune.
  */
@@ -2125,18 +2104,18 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND   Hot_PLA // PLA
-#define PREHEAT_1_TEMP_BED      Bed_PLA
+#define PREHEAT_1_TEMP_HOTEND   180
+#define PREHEAT_1_TEMP_BED      70
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND   Hot_ABS  // ABS
-#define PREHEAT_2_TEMP_BED      Bed_ABS
+#define PREHEAT_2_TEMP_HOTEND   240
+#define PREHEAT_2_TEMP_BED      110
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PETG"
-#define PREHEAT_3_TEMP_HOTEND   Hot_PETG  // PETG
-#define PREHEAT_3_TEMP_BED      Bed_PETG
+#define PREHEAT_3_TEMP_HOTEND   230
+#define PREHEAT_3_TEMP_BED      80
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
 /**
