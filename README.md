@@ -1,3 +1,12 @@
+
+# Notice!
+
+My Tevo Tarantula has died and I am replacing it with a Prusa Mk3S+. Consequently,
+I am no longer maintaining or updating this repository. I will leave it in place should
+anyone wish to fork it (I know a few people have already) and do their own thing with it.
+
+Y'all have fun now!
+
 ============================================================================
 
 __Configured for MY Tevo Tarantula. It works for me, it may not work for you!__
