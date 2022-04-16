@@ -39,7 +39,7 @@
 //#define CHANGE_Y_DIRECTION        // If your bed homes in the wrong direction (it should move front to back) enable this.
 //#define CHANGE_X_DIRECTION        // If your X carriage homes in the wrong direction (it should move right to left) enable this.
 //#define CHANGE_Z_DIRECTION        // If your Z homes in the wrong direction (it should move top to bottom) enable this.
-//#define HOTEND_E3DV6              // Genuine E3D v6 hotend.
+#define HOTEND_E3DV6              // Genuine E3D v6 hotend.
 //#define FULL_GRAPHIC_SMART        // Enable this if you have a RepRap Discount Full Graphic Smart Controller (The
                                     // stock controller is a RepRap Discount Smart Controller)
 #define NUM_Z_STEPPER_DRIVERS 1    // Change this to 2 if you have dual Z stepper motors with the second stepper motor
@@ -98,8 +98,8 @@
 //#define TRIPOINT
 //#define LINEAR
 //#define BILINEAR
-//#define UBL
-#define MANUAL
+#define UBL
+//#define MANUAL
 
 /**
  * Z-Probe offset from nozzle (https://github.com/JimBrown/MarlinTarantula/wiki/How-to-determine-your-Z-Probe-offset)
@@ -115,7 +115,7 @@
  * Number of grid points in each direction
  * Minimum 3. Maximum 15 for UBL. Maximum 7 for MANUAL
  */
-#define GRID_POINTS        3
+#define GRID_POINTS        9
 
 /**
  * Margin around perimiter of bed for probing (will not probe outside this margin)
@@ -778,8 +778,8 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#if ENABLED(HOTEND_E3DV6)
-  #define TEMP_SENSOR_0 5
+#if ENABLED(waassadawda)
+  #define TEMP_SENSOR_0 75
 #else
   #define TEMP_SENSOR_0 13
 #endif
@@ -1727,7 +1727,7 @@
 // The size of the printable area
 #define X_BED_SIZE 200
 #if ENABLED(LARGE_BED)
-  #define Y_BED_SIZE 280
+  #define Y_BED_SIZE 250
 #else
   #define Y_BED_SIZE 220
 #endif
@@ -1795,12 +1795,12 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
 #define FILAMENT_RUNOUT_SENSOR
-#define FIL_RUNOUT_PIN 19
+#define FIL_RUNOUT_PIN 15
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
-  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
+  #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
