@@ -84,7 +84,7 @@
  * Z-Probe type (must be none or one of them)
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
-//#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
+#define BLTOUCH       // ANTClabs BLTouch sensor (might also work with clones)
 //#define SN04          // Green sensor
 //#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
@@ -106,21 +106,21 @@
  * Use only one of Left/Right and Front/Behind. Others must be 0 (zero)
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
-#define SENSOR_LEFT        0
+#define SENSOR_LEFT        41
 #define SENSOR_RIGHT       0
-#define SENSOR_FRONT       0
+#define SENSOR_FRONT       21
 #define SENSOR_BEHIND      0
 
 /**
  * Number of grid points in each direction
  * Minimum 3. Maximum 15 for UBL. Maximum 7 for MANUAL
  */
-#define GRID_POINTS        9
+#define GRID_POINTS        5
 
 /**
  * Margin around perimiter of bed for probing (will not probe outside this margin)
  */
-#define BED_MARGIN         1
+#define BED_MARGIN         25
 
 /**
  * Servo probe deploy and stow angles
@@ -1729,7 +1729,7 @@
 #if ENABLED(LARGE_BED)
   #define Y_BED_SIZE 250
 #else
-  #define Y_BED_SIZE 220
+  #define Y_BED_SIZE 200
 #endif
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -3367,7 +3367,7 @@
 /**
  * Number of servos
  *
- * For some servo-related options NUM_SERVOS will be set automatically.
+ * For some servo-related options S will be set automatically.
  * Set this manually if there are extra servos needing manual control.
  * Set to 0 to turn off servo support.
  */
